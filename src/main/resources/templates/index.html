@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"
+	crossorigin></script>
+<script
+	src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+	crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>hello everyone</h1>
+
+	<div id="mydiv"></div>
+
+<!--  
+	<script type="text/babel" th:src="@{/js/main.js}">
+    </script>
+-->
+
+	<form th:action="@{primeForm}" th:object="${primenumberbean}"
+		method="POST">
+		<label>Input Number: </label> <input type="text" id="inputPrime"
+			name="inputPrime" />
+
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
